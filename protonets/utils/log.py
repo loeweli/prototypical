@@ -12,11 +12,13 @@ def extract_meter_values(meters):
 
     return ret
 
-def render_meter_values(meter_values):
+def render_meter_values(meter_values,writer,epoch):
     field_info = []
     for split in meter_values.keys():
         for field,val in meter_values[split].items():
             field_info.append("{:s} {:s} = {:0.6f}".format(split, field, val))
+            attri = "{}/{}".format(split,field)
+            writer.add_scalar(attri,val,epoch)
 
     return ', '.join(field_info)
 

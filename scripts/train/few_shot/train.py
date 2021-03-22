@@ -16,8 +16,11 @@ from protonets.engine import Engine
 import protonets.utils.data as data_utils
 import protonets.utils.model as model_utils
 import protonets.utils.log as log_utils
+import tensorboardX
 
 def main(opt):
+
+    writer = tensorboardX.SummaryWriter()
     if not os.path.isdir(opt['log.exp_dir']): # mkdir results
         os.makedirs(opt['log.exp_dir'])
 
@@ -89,7 +92,7 @@ def main(opt):
                                  desc="Epoch {:d} valid".format(state['epoch']))
 
         meter_vals = log_utils.extract_meter_values(meters)
-        print("Epoch {:02d}: {:s}".format(state['epoch'], log_utils.render_meter_values(meter_vals)))
+        print("Epoch {:02d}: {:s}".format(state['epoch'], log_utils.render_meter_values(meter_vals,writer,state['epoch'])))
         meter_vals['epoch'] = state['epoch']
         with open(trace_file, 'a') as f:
             json.dump(meter_vals, f)
