@@ -77,3 +77,5 @@ img2 = cv2.imread(r"D:\datasets\dataaug\data\vitium\1\0149_32.bmp")
 
 print(img.shape)
 print(img2.shape)
+
+print(int(4* 0.4))

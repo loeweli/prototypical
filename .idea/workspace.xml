@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd8a624c-6b3d-466b-bbe6-df5ea525f90a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fsadasdfew.py" beforeDir="false" afterPath="$PROJECT_DIR$/fsadasdfew.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protonets/data/omniglot.py" beforeDir="false" afterPath="$PROJECT_DIR$/protonets/data/omniglot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protonets/utils/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/protonets/utils/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protonets/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/protonets/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/train/few_shot/results/best_model.pt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/train/few_shot/results/best_model.pt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/train/few_shot/results/opt.json" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/train/few_shot/results/opt.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/train/few_shot/results/trace.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/train/few_shot/results/trace.txt" afterDir="false" />
@@ -20,23 +19,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/prototypical_networks_master$fsadasdfew.coverage" NAME="fsadasdfew Coverage Results" MODIFIED="1616467644653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/prototypical_networks_master$fsadasdfew.coverage" NAME="fsadasdfew Coverage Results" MODIFIED="1616487633858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/prototypical_networks_master$augfunc.coverage" NAME="augfunc Coverage Results" MODIFIED="1616486599847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protonets/data" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$run_trainval.coverage" NAME="run_trainval Coverage Results" MODIFIED="1615793313832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/train/few_shot" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$split_data.coverage" NAME="split_data Coverage Results" MODIFIED="1616467121486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/train/few_shot" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$dataaug.coverage" NAME="dataaug Coverage Results" MODIFIED="1616416691337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protonets/data" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$run_eval.coverage" NAME="run_eval Coverage Results" MODIFIED="1616463418070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/predict/few_shot" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$boardtest.coverage" NAME="boardtest Coverage Results" MODIFIED="1616400377921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$train.coverage" NAME="train Coverage Results" MODIFIED="1616406000939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/train/few_shot" />
-    <SUITE FILE_PATH="coverage/prototypical_networks_master$run_train.coverage" NAME="run_train Coverage Results" MODIFIED="1616477840121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/train/few_shot" />
+    <SUITE FILE_PATH="coverage/prototypical_networks_master$engine.coverage" NAME="engine Coverage Results" MODIFIED="1616486605011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protonets" />
+    <SUITE FILE_PATH="coverage/prototypical_networks_master$run_train.coverage" NAME="run_train Coverage Results" MODIFIED="1616489266071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/train/few_shot" />
     <SUITE FILE_PATH="coverage/prototypical_networks_master$trainval.coverage" NAME="trainval Coverage Results" MODIFIED="1615798680582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/train/few_shot" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="augfunc.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/protonets/data/augfunc.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="405">
+                    <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+                    <folding>
+                      <element signature="e#0#11#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="run_train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/run_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="1755">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -47,8 +70,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="421">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -56,35 +79,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protonets/utils/log.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omniglot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="omniglot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protonets/data/omniglot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="238">
+              <caret line="18" column="83" lean-forward="true" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -92,44 +94,47 @@
       <file leaf-file-name="engine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protonets/engine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="262">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protonets/data/base.py">
+      <file leaf-file-name="few_shot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protonets/models/few_shot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="227">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protonets/utils/model.py">
+      <file leaf-file-name="fsadasdfew.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fsadasdfew.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="343">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_tqdm.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/tqdm/_tqdm.py">
+      <file leaf-file-name="split_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/split_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="896" selection-start-line="896" selection-end-line="896" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataloader.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/torch/utils/data/dataloader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="163" selection-start-line="163" selection-end-line="163" />
+            <state relative-caret-position="181">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,7 +165,6 @@
         <option value="$PROJECT_DIR$/protonets/models/utils.py" />
         <option value="$PROJECT_DIR$/protonets/models/factory.py" />
         <option value="$PROJECT_DIR$/protonets/data/base.py" />
-        <option value="$PROJECT_DIR$/protonets/engine.py" />
         <option value="$PROJECT_DIR$/protonets/models/few_shot.py" />
         <option value="$PROJECT_DIR$/results/trace.txt" />
         <option value="$PROJECT_DIR$/scripts/train/few_shot/run_trainval.py" />
@@ -170,12 +174,14 @@
         <option value="$PROJECT_DIR$/scripts/train/few_shot/train.py" />
         <option value="$PROJECT_DIR$/protonets/utils/log.py" />
         <option value="$PROJECT_DIR$/protonets/utils/data.py" />
-        <option value="$PROJECT_DIR$/protonets/data/dataaug.py" />
         <option value="$PROJECT_DIR$/scripts/predict/few_shot/eval.py" />
         <option value="$PROJECT_DIR$/scripts/train/few_shot/split_data.py" />
-        <option value="$PROJECT_DIR$/fsadasdfew.py" />
+        <option value="$PROJECT_DIR$/protonets/data/dataaug.py" />
         <option value="$PROJECT_DIR$/protonets/data/omniglot.py" />
         <option value="$PROJECT_DIR$/scripts/train/few_shot/run_train.py" />
+        <option value="$PROJECT_DIR$/protonets/engine.py" />
+        <option value="$PROJECT_DIR$/fsadasdfew.py" />
+        <option value="$PROJECT_DIR$/protonets/data/augfunc.py" />
       </list>
     </option>
   </component>
@@ -189,8 +195,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2106" />
-    <option name="y" value="-26" />
+    <option name="x" value="1776" />
+    <option name="y" value="-10" />
     <option name="width" value="1400" />
     <option name="height" value="999" />
   </component>
@@ -206,17 +212,6 @@
             <path>
               <item name="prototypical_networks_master" type="b2602c69:ProjectViewProjectNode" />
               <item name="prototypical_networks_master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prototypical_networks_master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prototypical_networks_master" type="462c0819:PsiDirectoryNode" />
-              <item name="protonets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prototypical_networks_master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prototypical_networks_master" type="462c0819:PsiDirectoryNode" />
-              <item name="protonets" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prototypical_networks_master" type="b2602c69:ProjectViewProjectNode" />
@@ -270,7 +265,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run_train">
-    <configuration name="dataaug" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="augfunc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="prototypical_networks_master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,7 +278,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/protonets/data/dataaug.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/protonets/data/augfunc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="engine" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="prototypical_networks_master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/protonets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/protonets/engine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,25 +317,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fsadasdfew.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="run_eval" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="prototypical_networks_master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/predict/few_shot" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/predict/few_shot/run_eval.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -369,16 +364,16 @@
       <item itemvalue="Python.run_train" />
       <item itemvalue="Python.split_data" />
       <item itemvalue="Python.fsadasdfew" />
-      <item itemvalue="Python.dataaug" />
-      <item itemvalue="Python.run_eval" />
+      <item itemvalue="Python.augfunc" />
+      <item itemvalue="Python.engine" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_train" />
         <item itemvalue="Python.fsadasdfew" />
+        <item itemvalue="Python.engine" />
+        <item itemvalue="Python.augfunc" />
         <item itemvalue="Python.split_data" />
-        <item itemvalue="Python.run_eval" />
-        <item itemvalue="Python.dataaug" />
       </list>
     </recent_temporary>
   </component>
@@ -413,16 +408,16 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32719395" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3618635" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3856988" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.24593717" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28602383" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13219616" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.27899343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.29144096" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.37417942" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -447,7 +442,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/protonets/engine.py</url>
-          <line>57</line>
+          <line>62</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -482,7 +477,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/protonets/engine.py</url>
-          <line>55</line>
+          <line>60</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -492,8 +487,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/protonets/engine.py</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/protonets/engine.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/protonets/engine.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/protonets/engine.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="107" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -503,7 +513,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="88" />
+      <option name="time" value="111" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -512,20 +522,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/torch/nn/modules/container.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="473" selection-start-line="473" selection-end-line="473" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/torch/nn/modules/conv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -663,28 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/envs/th041/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="255" column="8" selection-start-line="255" selection-start-column="8" selection-end-line="255" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-112">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protonets/data/dataaug.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#855#1654#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,30 +683,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/split_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protonets/utils/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fsadasdfew.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,13 +697,6 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/1680469183/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="2130" selection-start-line="2130" selection-end-line="2130" />
         </state>
       </provider>
     </entry>
@@ -767,16 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protonets/models/few_shot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/torch/utils/data/dataloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protonets/utils/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -829,30 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protonets/utils/log.py">
+    <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protonets/engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="-695">
+          <caret line="1030" selection-start-line="1030" selection-end-line="1030" />
         </state>
       </provider>
     </entry>
@@ -863,22 +777,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protonets/data/omniglot.py">
+    <entry file="file://D:/Anaconda3/envs/th041/Lib/site-packages/torch/utils/data/dataloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="155">
+          <caret line="313" selection-start-line="313" selection-end-line="313" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protonets/utils/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-626">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protonets/data/dataaug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Anaconda3/envs/th041/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="755" selection-start-line="755" selection-end-line="755" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/split_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fsadasdfew.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/1680469183/cv2/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="2392" column="4" selection-start-line="2392" selection-start-column="4" selection-end-line="2392" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protonets/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protonets/models/few_shot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/train/few_shot/run_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        <state relative-caret-position="1755">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protonets/data/augfunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protonets/data/omniglot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="83" lean-forward="true" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

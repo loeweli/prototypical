@@ -1,4 +1,5 @@
 from tqdm import tqdm
+from protonets.data.augfunc import samplepairing
 
 class Engine(object):
     def __init__(self):
@@ -34,11 +35,15 @@ class Engine(object):
             state['epoch_size'] = len(state['loader'])
 
             for sample in tqdm(state['loader'], desc="Epoch {:d} train".format(state['epoch'] + 1)):
+                # TODO 数据增强加在这里
+                sample = samplepairing(sample)
+
                 # support [60,5,1,28,28]  query [60,5,1,28,28]
                 state['sample'] = sample
                 self.hooks['on_sample'](state)
 
                 state['optimizer'].zero_grad() #梯度重置为0
+
                 loss, state['output'] = state['model'].loss(state['sample'])
                 self.hooks['on_forward'](state)
 

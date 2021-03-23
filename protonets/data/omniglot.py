@@ -16,10 +16,10 @@ from torchnet.transform import compose
 
 import protonets
 from protonets.data.base import convert_dict, CudaTransform, EpisodicBatchSampler, SequentialBatchSampler
-
 # OMNIGLOT_DATA_DIR  = os.path.join(os.path.dirname(__file__), '../../data/omniglot')
+OMNIGLOT_DATA_DIR  = "D:\datasets\data\omniglot"
 # TODO 修改数据路径
-OMNIGLOT_DATA_DIR  =  r'D:\datasets\dataaug\data'
+# OMNIGLOT_DATA_DIR  =  r'D:\datasets\dataaug\data'
 OMNIGLOT_CACHE = { }
 
 def load_image_path(key, out_field, d):
@@ -51,14 +51,14 @@ def scale_image(key, height, width, d):
 
 def load_class_images(d):
     if d['class'] not in OMNIGLOT_CACHE:
-        # alphabet, character, rot = d['class'].split('/')
-        # image_dir = os.path.join(OMNIGLOT_DATA_DIR, 'data', alphabet,character)
-        # class_images = sorted(glob.glob(os.path.join(image_dir, '*.png')))
+        alphabet, character, rot = d['class'].split('/')
+        image_dir = os.path.join(OMNIGLOT_DATA_DIR, 'data', alphabet,character)
+        class_images = sorted(glob.glob(os.path.join(image_dir, '*.png')))
 
         # TODO new data
-        character, rot = d['class'].split('/')
-        image_dir = os.path.join(OMNIGLOT_DATA_DIR,"vitium", character)
-        class_images = sorted(glob.glob(os.path.join(image_dir, '*.bmp')))
+        # character, rot = d['class'].split('/')
+        # image_dir = os.path.join(OMNIGLOT_DATA_DIR,"vitium", character)
+        # class_images = sorted(glob.glob(os.path.join(image_dir, '*.bmp')))
         if len(class_images) == 0:
             raise Exception("No images found for omniglot class {} at {}. Did you run download_omniglot.sh first?".format(d['class'], image_dir))
 
