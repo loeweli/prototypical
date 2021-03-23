@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch
+import cv2
 # x = torch.randn(60,1,3,3)
 # # conv = torch.nn.Conv2d(1,64,3,padding=1)
 # max = nn.MaxPool2d(2)
@@ -8,7 +9,10 @@ import torch
 #
 # print(res.shape)
 
-
+ff = r"D:\datasets\dataaug\data\vitium\0\027_49.bmp 0"
+a,v = ff.split(" ")
+print(a)
+print(v)
 # import numpy as np
 #
 # a = torch.arange(0,6)
@@ -68,3 +72,8 @@ print("dim=1:\n",b)
 # d = torch.gather(a, 0,index2)
 # print(d)
 
+img = cv2.imread(r"D:\project\prototypical_networks_master\data\omniglot\data\Anglo-Saxon_Futhorc\character04\0299_01.png")
+img2 = cv2.imread(r"D:\datasets\dataaug\data\vitium\1\0149_32.bmp")
+
+print(img.shape)
+print(img2.shape)

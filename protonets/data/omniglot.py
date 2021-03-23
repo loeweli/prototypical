@@ -6,8 +6,9 @@ from functools import partial
 
 import numpy as np
 from PIL import Image
-
+import matplotlib.pyplot as plt
 import torch
+import cv2
 from torchvision.transforms import ToTensor
 
 from torchnet.dataset import ListDataset, TransformDataset
@@ -16,15 +17,28 @@ from torchnet.transform import compose
 import protonets
 from protonets.data.base import convert_dict, CudaTransform, EpisodicBatchSampler, SequentialBatchSampler
 
-OMNIGLOT_DATA_DIR  = os.path.join(os.path.dirname(__file__), '../../data/omniglot')
+# OMNIGLOT_DATA_DIR  = os.path.join(os.path.dirname(__file__), '../../data/omniglot')
+# TODO 修改数据路径
+OMNIGLOT_DATA_DIR  =  r'D:\datasets\dataaug\data'
 OMNIGLOT_CACHE = { }
 
 def load_image_path(key, out_field, d):
-    d[out_field] = Image.open(d[key])
+    img = Image.open(d[key])
+    # TODO 修改mode为1
+    img = img.convert("L")
+    d[out_field] = img
+    # plt.figure("img")
+    # plt.imshow(img)
+    # plt.show()
     return d
 
 def convert_tensor(key, d):
-    d[key] = 1.0 - torch.from_numpy(np.array(d[key], np.float32, copy=False)).transpose(0, 1).contiguous().view(1, d[key].size[0], d[key].size[1])
+    # 字符数据
+    # img = 1.0 - torch.from_numpy(np.array(d[key], np.float32, copy=False)).transpose(0, 1).contiguous().view(1, d[key].size[0], d[key].size[1])
+    # todo 新数据
+    # print(d[key].size[0], d[key].size[1])
+    img = torch.from_numpy(np.array(d[key], np.float32, copy=False)).transpose(0, 1).contiguous().view(1, d[key].size[0], d[key].size[1])
+    d[key] = img
     return d
 
 def rotate_image(key, rot, d):
@@ -37,10 +51,14 @@ def scale_image(key, height, width, d):
 
 def load_class_images(d):
     if d['class'] not in OMNIGLOT_CACHE:
-        alphabet, character, rot = d['class'].split('/')
-        image_dir = os.path.join(OMNIGLOT_DATA_DIR, 'data', alphabet, character)
+        # alphabet, character, rot = d['class'].split('/')
+        # image_dir = os.path.join(OMNIGLOT_DATA_DIR, 'data', alphabet,character)
+        # class_images = sorted(glob.glob(os.path.join(image_dir, '*.png')))
 
-        class_images = sorted(glob.glob(os.path.join(image_dir, '*.png')))
+        # TODO new data
+        character, rot = d['class'].split('/')
+        image_dir = os.path.join(OMNIGLOT_DATA_DIR,"vitium", character)
+        class_images = sorted(glob.glob(os.path.join(image_dir, '*.bmp')))
         if len(class_images) == 0:
             raise Exception("No images found for omniglot class {} at {}. Did you run download_omniglot.sh first?".format(d['class'], image_dir))
 
