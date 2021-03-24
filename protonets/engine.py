@@ -1,5 +1,5 @@
 from tqdm import tqdm
-from protonets.data.augfunc import samplepairing
+from protonets.data.augfunc import samplepairing,mixup
 
 class Engine(object):
     def __init__(self):
@@ -36,7 +36,8 @@ class Engine(object):
 
             for sample in tqdm(state['loader'], desc="Epoch {:d} train".format(state['epoch'] + 1)):
                 # TODO 数据增强加在这里
-                sample = samplepairing(sample)
+                # sample = samplepairing(sample)
+                sample, ya, yb, lam = mixup(sample)
 
                 # support [60,5,1,28,28]  query [60,5,1,28,28]
                 state['sample'] = sample
@@ -44,7 +45,8 @@ class Engine(object):
 
                 state['optimizer'].zero_grad() #梯度重置为0
 
-                loss, state['output'] = state['model'].loss(state['sample'])
+                # loss, state['output'] = state['model'].loss(state['sample'])
+                loss, state['output'] = state['model'].mixuploss(state['sample'],ya,yb,lam)
                 self.hooks['on_forward'](state)
 
                 loss.backward() #反向传播

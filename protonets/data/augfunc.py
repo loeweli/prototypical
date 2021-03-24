@@ -1,5 +1,5 @@
 import  cv2
-import numpy
+import numpy as np
 import os
 import glob
 from PIL import Image
@@ -27,6 +27,37 @@ def samplepairing(sample):
     return sample
 
 
+def mixup(sample, alpha=1.0, use_cuda=False):
+    # 对数据的mixup 操作 x = lambda*x_i+(1-lamdda)*x_j
+    '''Returns mixed inputs, pairs of targets, and lambda'''
+    if alpha > 0:
+        lam = np.random.beta(alpha, alpha)
+    else:
+        lam = 1
+    x = sample["xs"]
+    xa ,xb = x[0] ,x[1]
+    label = sample["class"]
+    ya = label[0]
+    yb = label[1]
+    batch_size = x.size()[0]
+    if use_cuda:
+        index = torch.randperm(batch_size).cuda()
+    else:
+        index = torch.randperm(batch_size)
+    # residue = x[index, :]
+    # mixed_x = lam * x + (1 - lam) * x[index, :]  # 此处是对数据x_i 进行操作
+    mixed_x = lam * xa + (1 - lam) * xb  # 此处是对数据x_i 进行操作
+    mixed_y = lam * xb + (1 - lam) * xa  # 此处是对数据x_i 进行操作
+    xq = torch.cat([mixed_x.unsqueeze(0),mixed_y.unsqueeze(0)],0)
+    # y_a, y_b = y, y[index]  # 记录下y_i 和y_j
+    print(mixed_x.shape)
+    y = torch.arange(0, len(label)).view(len(label),1).expand(len(label), mixed_x.shape[0]).long()
+    ya = y[0]
+    yb = y[1]
+    # sample["xs"] = xa.unsqueeze(0)
+    # sample["xq"] = mixed_x.unsqueeze(0)
+    sample["xq"] = xq
+    return sample, ya, yb, lam  # 返回y_i 和y_j 以及lambda
 
 
 
